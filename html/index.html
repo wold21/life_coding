@@ -7,19 +7,22 @@
   </head>
   <body>
     <input
+      id="switch"
       type="button"
-      value="Night"
+      value="Color"
       onclick="
-    document.querySelector('body').style.backgroundColor = 'black';
-    document.querySelector('body').style.color = 'white';
-    "
-    />
-    <input
-      type="button"
-      value="Day"
-      onclick="
-    document.querySelector('body').style.backgroundColor = 'white';
-    document.querySelector('body').style.color = 'black';
+    if(document.querySelector('body').dataset.mode === 'day'){
+      document.querySelector('body').style.backgroundColor = 'white';
+      document.querySelector('body').style.color = 'black';
+      document.querySelector('body').dataset.mode = 'night';
+      this.value = 'Night'
+      
+    }else{
+      document.querySelector('body').style.backgroundColor = 'black';
+      document.querySelector('body').style.color = 'white';
+      document.querySelector('body').dataset.mode = 'day';
+      this.value = 'Day';
+    }
     "
     />
     <h1><a href="index.html">WEB</a></h1>
