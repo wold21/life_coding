@@ -15,10 +15,24 @@
       target.style.backgroundColor = 'black';
       target.style.color = 'white';
       this.value = 'Day'; 
+
+      var aList = document.querySelectorAll('a');
+      var i = 0;
+      while (i < aList.length){
+        aList[i].style.color = 'powderblue';
+        i++;
+      }
     }else{
       target.style.backgroundColor = 'white';
       target.style.color = 'black';
       this.value = 'Night';
+
+      var aList = document.querySelectorAll('a');
+      var i = 0;
+      while (i < aList.length){
+        aList[i].style.color = 'blue';
+        i++;
+      }
     }
     "
     />
