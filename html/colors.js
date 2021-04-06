@@ -19,6 +19,7 @@ var Links = {
     // jquery
     // 이 웹페이지에 있는 a태그를 제이쿼리로 컨트롤하겠다.
     $("a").css("color", color);
+    $("li").css("color", color);
   },
 };
 
@@ -26,7 +27,7 @@ function nightDayHandler(self) {
   var target = document.querySelector("body");
   if (self.value === "Night") {
     Body.setBackgroundColor("black");
-    Body.setColor("powderblue");
+    Body.setColor("rgb(43, 202, 64)");
     self.value = "Day";
     Links.setColor("powderblue");
   } else {
